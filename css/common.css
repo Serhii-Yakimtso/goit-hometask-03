@@ -1,0 +1,96 @@
+:root {
+  --primary-text-color: #757575;
+  --main-title-color: #212121;
+  --main-accent-color: #2196f3;
+  --main-background-color: #e5e5e5;
+  --secondary-background-color: #f5f4fa;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+
+  color: var(--primary-text-color);
+  background-color: var(--main-background-color);
+}
+
+/* убрать все метки со списков */
+li {
+  list-style: none;
+}
+
+/* убрать подчеркивание ссылок */
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* header навигация */
+.nav {
+  color: var(--main-title-color);
+  background-color: #ffffff;
+}
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo-left {
+  color: var(--main-accent-color);
+}
+.nav .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.link {
+  color: var(--main-title-color);
+}
+.link.current {
+  color: var(--main-accent-color);
+}
+.link:hover,
+.link:focus {
+  color: var(--main-accent-color);
+}
+.mail-tel {
+  color: var(--primary-text-color);
+}
+
+/* footer */
+.footer {
+  color: #ffffff;
+  background-color: #2f303a;
+}
+.address {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.address .text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.developers {
+  color: rgba(255, 255, 255, 0.4);
+}
+.join,
+.subscription {
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.button-subscription {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.button-subscription:hover,
+.button-subscription:focus {
+  color: var(--main-accent-color);
+}
