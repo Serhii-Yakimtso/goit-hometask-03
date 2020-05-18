@@ -1,3 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Остальной код */
 :root {
   --primary-text-color: #757575;
   --main-title-color: #212121;
@@ -25,37 +36,110 @@ a {
 
   text-decoration: none;
 }
+.displey-none {
+  display: none;
+}
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid tomato;
+}
 
 /* header навигация */
+/* задаем флекс всей навигации */
+/* вертикально выравниваем элементы флекса */
+/* задаем минимально возможную высоту header */
+/* задаем цвет шрифта нафигации */
+/* задаем задний фон */
 .nav {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+
   color: var(--main-title-color);
   background-color: #ffffff;
 }
+
+/* обнуляем верхний и нижний отступы от логотипа */
+/* задаем правый отступ от логотипа */
+/* задаем шрифт логотипу */
 .logo {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 80px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+/* меняем цвет левой части логотипа */
 .logo-left {
   color: var(--main-accent-color);
 }
+
+/* обнуляем верхний, нижний и левый отступы списка навигации */
+.nav > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* задаем флекс списку навигации */
+.site-nav {
+  display: flex;
+}
+
+/* задаем правый зазор между элементами навигации */
+.site-nav li:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* задаем строчно-блочный формат элементам навигации */
+/* задаем внутрений отступ от верхней и нижней границ header до элементов навигации */
+/* задаем шрифт элементам навигации */
 .nav .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
+/* задаем цвет шрифта элементам навигации */
 .link {
   color: var(--main-title-color);
 }
+
+/* задаем цвет шрифта текущего элемента навигации */
 .link.current {
   color: var(--main-accent-color);
 }
+
+/* задаем ховер и фокус элементам навигации */
 .link:hover,
 .link:focus {
   color: var(--main-accent-color);
 }
+
+/* задаем флекс контактам */
+/* прижимаем контакты к правой границе header */
+.site-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+/* задаем зазор между контактами навигации */
+.site-contacts li:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* задаем цвет элементам контактов навигации */
 .mail-tel {
   color: var(--primary-text-color);
 }
@@ -65,32 +149,48 @@ a {
   color: #ffffff;
   background-color: #2f303a;
 }
-.address {
+
+.footer p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer .container {
+  display: flex;
+}
+
+.footer .address {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.address .text {
+.footer .text {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.developers {
-  color: rgba(255, 255, 255, 0.4);
-}
-.join,
-.subscription {
+.footer .join,
+.footer .subscription {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.button-subscription {
+.footer ul {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.footer .button-subscription {
   font-weight: 900;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
 }
 
-.button-subscription:hover,
-.button-subscription:focus {
+.footer .button-subscription:hover,
+.footer .button-subscription:focus {
   color: var(--main-accent-color);
+}
+
+.footer .developers {
+  color: rgba(255, 255, 255, 0.4);
 }
