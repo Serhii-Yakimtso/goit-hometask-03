@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-/* Остальной код */
+/* задаем основные цвета */
 :root {
   --primary-text-color: #757575;
   --main-title-color: #212121;
@@ -17,6 +17,7 @@ html {
   --secondary-background-color: #f5f4fa;
 }
 
+/* общие стили для тегов и классов */
 body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -25,50 +26,83 @@ body {
   background-color: var(--main-background-color);
 }
 
-/* убрать все метки со списков */
+/* убираем все метки со списков */
 li {
   list-style: none;
 }
 
-/* убрать подчеркивание ссылок */
+/* задаем ссылкам наследуемый цвет */
+/* убираем подчеркивание ссылок */
 a {
   color: inherit;
 
   text-decoration: none;
 }
+
+/* задаем блочность изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* создаем класс для скрытия контента */
 .displey-none {
   display: none;
 }
+
+/* задаем ширину контейнера (ранее была 1230px) */
+/* задаем основные отступы контейнерам */
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid tomato;
 }
 
-/* header навигация */
-/* задаем флекс всей навигации */
+/* ВНИМАНИЕ КОСТЫЛИ */
+/* помощь для верстки */
+/* при финале скрыть */
+/* видимость контейнеров */
+.container,
+.section {
+  outline: 1px solid tomato;
+}
+/* header {
+  background-color: turquoise;
+}
+section.hero {
+  background-color: violet;
+}
+section.features {
+  background-color: wheat;
+}
+section.work {
+  background-color: yellow;
+}
+section.team {
+  background-color: blue;
+}
+section.clients {
+  background-color: coral;
+} */
+
+/* header */
+
+/* задаем флекс всему хэдэру */
 /* вертикально выравниваем элементы флекса */
 /* задаем минимально возможную высоту header */
 /* задаем цвет шрифта нафигации */
 /* задаем задний фон */
-.nav {
+.header.container {
   display: flex;
   align-items: center;
   min-height: 80px;
 
   color: var(--main-title-color);
-  background-color: #ffffff;
 }
 
-/* обнуляем верхний и нижний отступы от логотипа */
-/* задаем правый отступ от логотипа */
 /* задаем шрифт логотипу */
 .logo {
-  margin-bottom: 0;
-  margin-top: 0;
-  margin-right: 80px;
-
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -76,21 +110,24 @@ a {
   letter-spacing: 0.03em;
 }
 
+/* задаем правый отступ от логотипа */
+.header .logo {
+  margin-right: 85px;
+}
+
 /* меняем цвет левой части логотипа */
 .logo-left {
   color: var(--main-accent-color);
 }
 
+/* задаем флекс списку навигации */
 /* обнуляем верхний, нижний и левый отступы списка навигации */
 .nav > ul {
+  display: flex;
+
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
-
-/* задаем флекс списку навигации */
-.site-nav {
-  display: flex;
 }
 
 /* задаем правый зазор между элементами навигации */
@@ -112,7 +149,7 @@ a {
 }
 
 /* задаем цвет шрифта элементам навигации */
-.link {
+.nav .link {
   color: var(--main-title-color);
 }
 
@@ -128,69 +165,124 @@ a {
 }
 
 /* задаем флекс контактам */
+/* убираем верхний, нижний и правый отступ у списка контактов */
 /* прижимаем контакты к правой границе header */
-.site-contacts {
+.contacts {
   display: flex;
+
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
+  padding-left: 0;
 }
 
-/* задаем зазор между контактами навигации */
-.site-contacts li:not(:last-child) {
+/* задаем зазор между контактами */
+.contacts li:not(:last-child) {
   margin-right: 30px;
 }
 
-/* задаем цвет элементам контактов навигации */
+/* задаем цвет шрифта элементам контактов */
 .mail-tel {
   color: var(--primary-text-color);
 }
 
 /* footer */
+
+/* задаем цвет и задний фон футера */
 .footer {
   color: #ffffff;
   background-color: #2f303a;
 }
-
-.footer p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+/* Задаем флекс верхней части футера */
 .footer .container {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
+/* задаем логогтипу блочность */
+/* задаем логотипу нижний отступ */
+.footer .logo {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* задаем шрифты адресу */
 .footer .address {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer .text {
+
+/* меняем цвет шрифта контактам в адресе */
+.address .text {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .join,
-.footer .subscription {
+/* задаем верхний и нижний отступ разделу "присоединяйтесь" */
+.join {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/* задаем нижний отступ названиям разделов "присоедняйтесь" и "подпишитесь" */
+/* задаем шрифт разделам "присоедняйтесь" и "подпишитесь" */
+.join-head,
+.subscription-head {
+  display: block;
+  margin-bottom: 21px;
+
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.footer ul {
+
+/* задаем флекс списку соц.сетей */
+/* убираем верхний, нижний и левый зазоры списка соц.сетей */
+.join ul {
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 }
-.footer .button-subscription {
+
+/* задаем правый зазор элементам списка соц.сетей */
+.join li:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* убираем верхний и нижний зазоры кнопки "подписатся" */
+/* задаем шрифт кнопке "подписатся */
+.button-subscription {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-weight: 900;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
 }
 
-.footer .button-subscription:hover,
-.footer .button-subscription:focus {
+/* ховер и фокус кнопки "подписатся" */
+.button-subscription:hover,
+.button-subscription:focus {
   color: var(--main-accent-color);
 }
 
-.footer .developers {
+/* задаем верхний и нижний отступ подписи разработчка */
+/* задаем верхнюю рамку подписи разработчка */
+/* задаем цвет шрифта пдписи разработчика */
+.developers {
+  padding-top: 18px;
+  padding-bottom: 21px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* убираем верхний и нижний внешние зазоры пдписи разработчика и горизонтально центруем*/
+.developers > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

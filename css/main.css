@@ -11,17 +11,14 @@
 
 /* нижний отступ между сециями */
 .section {
-  margin-bottom: 94px;
-
-  outline: 1px solid tomato;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* секция "герой" */
 /* цвет текста в герое + центровка текста */
 .section.hero {
   color: #ffffff;
-
-  text-align: center;
 }
 
 /* убираем отступы в заголовке + задаем шрифт */
@@ -32,7 +29,6 @@
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -160,6 +156,11 @@
 }
 
 /* секция "наша команда */
+/* задаем задний фон секции */
+.section.team {
+  background-color: var(--secondary-background-color);
+}
+
 /* обнуляем верхний и нижний отступ с заголовков, абзацев и списков */
 .team h2,
 .team h3,
@@ -193,13 +194,15 @@
 
 /* задаем ширину каждой карточке члена команды */
 /* 4 карточки с тремя зазорами по 30px */
-.team .team-card {
+.team-card {
   width: calc((100%-90px) / 4);
-  outline: 1px solid red;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
 /* выставляем зазоры между карточками членов команды */
-.team .team-card:not(:last-child) {
+.team-card:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -240,8 +243,12 @@
 }
 
 /* задаем зазор между соцсетями в карточке члена команды */
-.team .social-links > li:not(:last-child) {
+.social-links > li:not(:last-child) {
   margin-right: 10px;
+}
+
+.social-links > li {
+  padding-bottom: 24px;
 }
 
 /* задаем цвет списку соцсетей в карточке члена команды */
@@ -265,7 +272,7 @@
 /* задаем флекс списку иконок клиентов */
 /* центрируем контент в списке иконок клиентов */
 /* обнуляем верхний, левый и нижний зазор списка иконок клиентов */
-.clients > ul {
+.clients ul {
   display: flex;
   justify-content: center;
 
@@ -274,7 +281,7 @@
   padding-left: 0;
 }
 
-/*  */
+/* задаем правый отступ между иконками списка клиентов */
 .clients li:not(:last-child) {
   margin-right: 30px;
 }

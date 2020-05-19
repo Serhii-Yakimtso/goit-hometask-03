@@ -19,34 +19,36 @@
     <!-- шапка -->
 
     <header>
-      <nav class="nav container">
-        <p lang="en" class="logo"><span class="logo-left">Web</span> Studio</p>
+      <div class="container header">
+        <div class="logo">
+          <a href="./index.html"><span class="logo-left">Web</span> Studio</a>
+        </div>
+        <nav class="nav">
+          <ul class="site-nav">
+            <li><a href="./index.html" class="link current">Студия</a></li>
+            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+            <li><a href="" class="link">Контакты</a></li>
+          </ul>
+        </nav>
 
-        <ul class="site-nav">
-          <li><a href="./index.html" class="link current">Студия</a></li>
-          <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-          <li><a href="" class="link">Контакты</a></li>
-        </ul>
-        <ul class="site-contacts">
+        <ul class="contacts">
           <li>
-            <img src="./images/mail-head.svg" alt="электронная почта" />
-            <a href="mailto:info@devstudio.com" class="link mail-tel"
+            <a href="mailto:info@devstudio.com" class="mail-tel link"
               >info@devstudio.com</a
             >
           </li>
           <li>
-            <img src="./images/smartphone-head.svg" alt="телефон" />
-            <a href="tel:+380961111111" class="link mail-tel"
+            <a href="tel:+380961111111" class="mail-tel link"
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
       <!-- банер (герой) -->
-      <section class="section hero">
+      <section class="hero">
         <h1>эффективные решения для вашего бизнеса</h1>
         <a href="" class="button">Заказать услугу</a>
       </section>
@@ -121,7 +123,7 @@
               <img
                 src="./images/image01.jpg"
                 alt="Десктопные приложения"
-                width="380"
+                width="370"
                 height="294"
               />
               <p class="text">Десктопные приложения</p>
@@ -130,7 +132,7 @@
               <img
                 src="./images/image02.jpg"
                 alt="Мобильные приложения"
-                width="380"
+                width="370"
                 height="294"
               />
               <p class="text">Мобильные приложения</p>
@@ -139,7 +141,7 @@
               <img
                 src="./images/image03.jpg"
                 alt="Дизайнерские решения"
-                width="380"
+                width="370"
                 height="294"
               />
               <p class="text">Дизайнерские решения</p>
@@ -157,7 +159,7 @@
               <img
                 src="./images/photo01.jpg"
                 alt="John Smith"
-                width="278"
+                width="270"
                 height="260"
               />
               <h3 class="title-name">John Smith</h3>
@@ -189,7 +191,7 @@
               <img
                 src="./images/photo02.jpg"
                 alt="Marta Stewart"
-                width="278"
+                width="270"
                 height="260"
               />
               <h3 class="title-name">Marta Stewart</h3>
@@ -221,7 +223,7 @@
               <img
                 src="./images/photo03.jpg"
                 alt="Robert Jakis"
-                width="278"
+                width="270"
                 height="260"
               />
               <h3 class="title-name">Robert Jakis</h3>
@@ -253,7 +255,7 @@
               <img
                 src="./images/photo04.jpg"
                 alt="Martin Doe"
-                width="278"
+                width="270"
                 height="260"
               />
               <h3 class="title-name">Martin Doe</h3>
@@ -287,50 +289,53 @@
 
       <!--Раздел "Постоянные клиенты"-->
       <section class="section clients">
-        <h2 class="title">Постоянные клиенты</h2>
-        <ul>
-          <li class="link">
-            <a href="">
-              <img src="./images/logo-client-01.svg" alt="Клиент №1" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./images/logo-client-02.svg" alt="Клиент №2" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./images/logo-client-03.svg" alt="Клиент №3" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./images/logo-client-04.svg" alt="Клиент №4" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./images/logo-client-05.svg" alt="Клиент №5" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./images/logo-client-06.svg" alt="Клиент №6" />
-            </a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="title">Постоянные клиенты</h2>
+          <ul>
+            <li class="link">
+              <a href="">
+                <img src="./images/logo-client-01.svg" alt="Клиент №1" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/logo-client-02.svg" alt="Клиент №2" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/logo-client-03.svg" alt="Клиент №3" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/logo-client-04.svg" alt="Клиент №4" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/logo-client-05.svg" alt="Клиент №5" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/logo-client-06.svg" alt="Клиент №6" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <!--Футер-->
     <footer class="footer">
-      <!-- Адресс компании -->
       <div class="container">
         <div>
-          <p lang="en" class="logo">
-            <span class="logo-left">Web</span> Studio
-          </p>
+          <!-- LOGO -->
+          <a href="./index.html" class="logo"
+            ><span class="logo-left">Web</span> Studio</a
+          >
+          <!-- Адресс компании -->
           <address class="address">
             г. Киев, пр-т Леси Украинки, 26 <br />
             <span class="text">info@example.com<br /></span>
@@ -339,33 +344,41 @@
         </div>
 
         <!-- Перечень соц.сетей сайта -->
-        <div class="footer-links">
-          <b class="join">присоединяйтесь</b>
+        <div class="join">
+          <b class="join-head">присоединяйтесь</b>
           <ul>
             <li>
-              <a href="" aria-label="Ссылка на Instagram">Instagram</a>
+              <a href="" aria-label="Ссылка на Instagram" class="link"
+                >Instagram</a
+              >
             </li>
             <li>
-              <a href="" aria-label="Ссылка на Twitter">Twitter</a>
+              <a href="" aria-label="Ссылка на Twitter" class="link">Twitter</a>
             </li>
             <li>
-              <a href="" aria-label="Ссылка на Facebook">Facebook</a>
+              <a href="" aria-label="Ссылка на Facebook" class="link"
+                >Facebook</a
+              >
             </li>
             <li>
-              <a href="" aria-label="Ссылка на LinkedIn">LinkedIn</a>
+              <a href="" aria-label="Ссылка на LinkedIn" class="link"
+                >LinkedIn</a
+              >
             </li>
           </ul>
         </div>
 
         <!-- Форма подписки на рассылку через почту -->
         <div>
-          <b class="subscription">Подпишитесь на рассылку</b>
+          <b class="subscription-head">Подпишитесь на рассылку</b>
           <!-- вставить форму -->
           <p class="button-subscription">Подписаться</p>
         </div>
       </div>
       <!-- Подпись разработчика -->
-      <p class="developers container">2020 | Developed by GoIT Students</p>
+      <div class="developers container">
+        <p>2020 | Developed by GoIT Students</p>
+      </div>
     </footer>
   </body>
 </html>
