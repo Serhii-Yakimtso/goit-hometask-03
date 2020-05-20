@@ -17,14 +17,20 @@
 
 /* секция "герой" */
 /* цвет текста в герое + центровка текста */
-.section.hero {
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+
   color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* убираем отступы в заголовке + задаем шрифт */
 .hero > h1 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 46px;
 
   font-weight: 900;
   font-size: 44px;
@@ -35,11 +41,20 @@
 
 /* задаем шрифт кнопке */
 .hero .button {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
   letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: var(--main-accent-color);
 }
 
 /* секция "особенность" */
