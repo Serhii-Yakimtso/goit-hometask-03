@@ -287,8 +287,37 @@
 }
 
 /* Портфолио */
+
+/* задаем флекс списку кнопок фильтра */
+/* центрируем кнопки фильтра */
+/* УБираем верхний, нижнний и левый отступ у списка кнопок фильтра */
+.filter {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+/* задаем зазор межд кнопками фильтра */
+.filter > li {
+  margin-right: 8px;
+}
+
 /* кнопки-фильтр портфолио */
-.portfolio .button {
+/* задаем зазор внутри кнопок */
+/* задаем внутрений фон и радиус */
+/* задаем шрифт кнопок */
+.filter .button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -299,21 +328,83 @@
 
   color: var(--main-title-color);
 }
-.portfolio .button:hover,
-.portfolio .button:focus {
+
+/* задаем ховер и фокус кнопкам фильтра */
+.filter .button:hover,
+.filter .button:focus {
   color: #ffffff;
   background-color: var(--main-accent-color);
 }
 
+/* задаем флекс списку работ */
+/* задаем перенос флекса */
+/* обнуляем верхний, нижний и левый отступы списка работ */
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* .cards > li {
+  width: calc((100%-60px) / 3);
+} */
+
+/* задаем правый отступ элементам списка работ */
+.portfolio-cards > li:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* задаем нижний отступ элементам списка работ */
+.portfolio-cards > li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* задаем верхние радиусы карточке списка работ */
+/* задаем ширину карточке списка работ */
+.card-area {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+
+  width: 370px;
+}
+
+/* задаем внутрение утступы текстового контента карточки списка работ */
+/* задаем рамку (кроме верхней) текстовому контенту карточки списка работ */
+/* задаем нижние радиусы рамке текстового контента карточки списка работ */
+.card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
 /* список наших работ */
-.portfolio .title {
+.card-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 
   color: var(--main-title-color);
 }
-.portfolio .text {
+.card-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;

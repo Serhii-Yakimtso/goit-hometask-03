@@ -13,7 +13,7 @@ html {
   --primary-text-color: #757575;
   --main-title-color: #212121;
   --main-accent-color: #2196f3;
-  --main-background-color: #e5e5e5;
+  --main-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
 }
 
@@ -47,8 +47,15 @@ img {
 }
 
 /* создаем класс для скрытия контента */
-.displey-none {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* задаем ширину контейнера (ранее была 1230px) */
@@ -66,6 +73,17 @@ img {
 .container,
 .section {
   outline: 1px solid tomato;
+}
+
+.card-upper-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* header {
   background-color: turquoise;
