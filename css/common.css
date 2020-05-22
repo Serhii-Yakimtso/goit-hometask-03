@@ -61,9 +61,12 @@ img {
 /* задаем ширину контейнера (ранее была 1230px) */
 /* задаем основные отступы контейнерам */
 .container {
-  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  width: 1200px;
 }
 
 /* ВНИМАНИЕ КОСТЫЛИ */
@@ -72,7 +75,7 @@ img {
 /* видимость контейнеров */
 .container,
 .section {
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 .card-upper-text {
