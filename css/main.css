@@ -79,9 +79,27 @@
   margin-right: 30px;
 }
 
-/* задаем нижний отступ под изображением в карточке */
+/* задаем блочность изображению с размерами */
+/* задаем отступы под изображением в карточке */
+/* задаем радиус рамке */
+/* задаем задний фон */
 .features .img {
+  display: block;
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 4px;
+
+  background: var(--secondary-background-color);
+}
+
+.features .img:hover,
+.features .img:focus {
+  background: var(--main-accent-color);
 }
 
 /* обнуляем верхний и нижний отсутп заголовка и текста в карточке */
@@ -294,6 +312,18 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+/* задаем флекс иконкам клиентов для центрирования */
+/* задаем размеры блоку иконки и рамку */
+.clients li {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* задаем правый отступ между иконками списка клиентов */
